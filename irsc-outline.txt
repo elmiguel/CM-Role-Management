@@ -1,0 +1,64 @@
+irsc homepage
+  + menu
+    -- Logo
+    -- Search bar
+    -- about
+    -- get started
+      -- find your path
+      -- apply
+      -- afford
+      -- enroll
+    -- more
+      -- graduation and beyond: transferring out
+      -- tools: Bb, mail, workday, support, river life, myirsc
+      -- additional resources
+      -- even more
+  + cover
+    -- Slogan: Be a Pioneer
+    -- Animated background
+  + fact strip
+  + call outs
+    -- Find your path
+      -- guided pathways landing page
+        -- filter results
+        -- learning outcomes
+        -- degree programs
+        -- links to: apply, afford, enroll
+      -- academic advising
+    -- Apply
+      -- landing page
+        -- tabs for applications
+          -- transient
+          -- transfer
+          -- dual enrollment
+          -- bachelor
+          -- veterans
+          -- international
+        -- resources
+      -- tie to ERP
+      -- academic advising
+    -- Afford
+      -- landing page
+        -- financial aid
+        -- fafsa
+        -- scholarships
+        -- grants
+      -- resources
+      -- academic advising
+      -- link to: find you path, apply, enroll
+    -- Enroll
+      -- landing page
+        -- 5 steps (link back)
+          -- link to: find you path, apply, afford
+        -- video
+        -- resources
+      -- academic advising
+  + spotlights
+  + social media
+  + events | news
+  + culture + slogan tag line
+  + footer
+    -- contact info: address | phone
+    -- social media
+    -- web inquiry
+    -- legal links

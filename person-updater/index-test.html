@@ -1,0 +1,228 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset=utf-8>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ninja JS</title>
+  <link rel="stylesheet" href="css/ninja.css" media="screen" title="no title">
+  <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <header class="bg-primary text-white">
+    <h1>Welcome to <span class="ninja-shadow">ninja.js</span></h1>
+    <h3 ninja="Ninja!">
+      This is a header element #1. (Click me I change)
+    </h3>
+    <h3 ninja="Ninja!">
+      This is a header element #2. (Click me I change)
+    </h3>
+    <h3 id="ninja" ninjas>
+      This is a header element #3.
+    </h3>
+
+    <p async-data>
+      I will be replaced by async data with a template with the same id as my attribute!
+    </p>
+
+  </header>
+
+  <div class="grid">
+    <h1>Experimental! (.grid)</h1>
+    <div class="full-width">
+      <p>I am a .full-width column; no need for say col-6! Why? Because it really is just that anyway! ;)</p>
+    </div>
+
+    <div class="col-5 bg-light-gray"><p>col-5</p></div><div class="col-1 bg-light-gray"><p>col-1</p></div>
+    <div class="col-4 bg-light-gray"><p>col-4</p></div><div class="col-2 bg-light-gray"><p>col-2</p></div>
+    <div class="col-3 bg-light-gray"><p>col-3</p></div><div class="col-3 bg-light-gray"><p>col-3</p></div>
+    <div class="col-2 bg-light-gray"><p>col-2</p></div><div class="col-4 bg-light-gray"><p>col-4</p></div>
+    <div class="col-1 bg-light-gray"><p>col-1</p></div><div class="col-5 bg-light-gray"><p>col-5</p></div>
+
+  </div>
+
+  <section>
+    <div class="row">
+      <div class="col-6">
+        <p>
+          This is a grid div with a row. <br>
+          (this section has a default background-color: bg-white ;))
+        </p>
+      </div>
+
+      <div class="col-3">
+        <div class="col-6">
+          <div class="col-4">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+          </div>
+          <div class="col-2">
+            <p>
+              Hi, I am a nested col-2 in a col-6 that's in side of a col-3 AND inside a row!
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-3">
+        <p class="text-dark">text-dark</p>
+        <p class="text-gray">text-gray</p>
+        <p class="text-light-gray">text-light-gray</p>
+        <p class="text-primary">text-primary</p>
+        <p class="text-secondary">text-secondary</p>
+        <p class="text-info">text-info</p>
+        <p class="text-success">text-success</p>
+        <p class="text-warning">text-warning</p>
+        <p class="text-danger">text-danger</p>
+        <p class="text-default">text-default</p>
+        <p class="bg-primary"><span class="text-white">text-white</span></p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="row">
+          <div class="card">
+            <div class="card-title">
+              <h4>Cards!</h4>
+            </div>
+            <div class="card-content">
+              <img src="http://placehold.it/350x150" alt="Some Image" />
+              <p>
+                Some text stuff here.
+              </p>
+            </div>
+            <div class="card-footer">
+              <p>
+                Card footer
+              </p>
+            </div>
+          </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-dark">
+    <div class="row">
+      <div class="col-6">
+        <h1>bg-dark</h1>
+        <p>
+          Sections with style
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-gray">
+    <div class="row">
+      <div class="col-6">
+        <h1>bg-gray</h1>
+        <p>
+          Sections with style
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-light-gray">
+    <div class="row">
+      <div class="col-6">
+        <h1>bg-light-gray</h1>
+        <p>
+          Sections with style
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-primary">
+    <div class="row">
+      <div class="col-6">
+        <h1>bg-primary</h1>
+        <p>
+          Sections with style
+        </p>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="bg-secondary">
+    <div class="row">
+      <div class="col-6">
+        <h1>bg-secondary</h1>
+        <p>
+          Sections with style
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-info">
+    <div class="row">
+      <div class="col-6">
+        <h1>bg-info</h1>
+        <p>
+          Sections with style
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-success">
+    <div class="row">
+      <div class="col-6">
+        <h1>bg-success</h1>
+        <p>
+          Sections with style
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-warning">
+    <div class="row">
+      <div class="col-6">
+        <h1>bg-warning</h1>
+        <p>
+          Sections with style
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-danger">
+    <div class="row">
+      <div class="col-6">
+        <h1>bg-danger</h1>
+        <p>
+          Sections with style
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-default">
+    <div class="row">
+      <div class="col-6">
+        <h1>bg-default</h1>
+        <p>
+          Sections with style
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <script id="async-data" type="text/x-handlebars-template">
+    <p>
+      id: {{id}}, title: {{title}}, body: {{body}}, userId: {{userId}}
+    </p>
+  </script>
+
+  <script src="js/handlebars.min.js"></script>
+  <script src="js/ninja1.js"></script>
+  <!--script src="js/ninja-test1.js"></script-->
+</body>
+</html>
