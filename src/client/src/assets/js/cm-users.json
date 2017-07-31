@@ -1,0 +1,52 @@
+{
+  "users": [
+    {
+      "username": "skenanya",
+      "name": {
+        "first": "Spike",
+        "last": "Kenanyahu"
+      },
+      "passed": false
+    },
+    {
+      "username": "bkalev",
+      "name": {
+        "first": "Bertilo",
+        "last": "Kalev"
+      },
+      "passed": false
+    },
+    {
+      "username": "kchip",
+      "name": {
+        "first": "Kennith",
+        "last": "Chip"
+      },
+      "passed": true
+    },
+    {
+      "username": "gmilán",
+      "name": {
+        "first": "Geraint",
+        "last": "Milán"
+      },
+      "passed": false
+    },
+    {
+      "username": "iÞórketi",
+      "name": {
+        "first": "Ingolf",
+        "last": "Þórketill"
+      },
+      "passed": true
+    },
+    {
+      "username": "jprabhu",
+      "name": {
+        "first": "Joseph",
+        "last": "Prabhu"
+      },
+      "passed": true
+    }
+  ]
+}

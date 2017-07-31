@@ -1,0 +1,8 @@
+<div *ngIf="userInventory?.inventory == []" class="col-md-2 text-center">
+  <p>You have not added any users to your inventory.</p>
+</div>
+
+<div *ngFor="let inventory of userInventory?.inventory; let i = index" class="col-md-2">
+  <!-- <irsc-user-detail [userSetting]="inventory" (emitter)="userInventory?.inventory.splice(i,1)"></irsc-user-detail> -->
+  <irsc-user-detail [userSetting]="inventory" (emitter)="removeUserFromInventory(i, inventory)"></irsc-user-detail>
+</div>

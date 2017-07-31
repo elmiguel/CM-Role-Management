@@ -1,0 +1,17 @@
+[
+  {
+    title: 'MEAN CM Instructors 3'
+    group: 'Atom'
+    paths: [
+      '~/CodeProjects/irsc-projects/mean-cm-instructors-3'
+    ]
+    settings:
+      core:
+        themes: [
+          "atom-dark-ui"
+          "monokai"
+        ]
+        'editor.tabLength': 2
+        'editor.showInvisibles': true
+  }
+]

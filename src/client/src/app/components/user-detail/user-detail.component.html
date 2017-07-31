@@ -1,0 +1,92 @@
+<h3><i class="fa fa-times pull-right text-danger" aria-hidden="true" (click)="destroy()"></i></h3>
+<!-- <img src="http://pingendo.github.io/pingendo-bootstrap/assets/user_placeholder.png" class="center-block img-circle img-responsive"> -->
+<img src="/assets/img/student.png" class="center-block img-circle img-responsive">
+<h3 class="text-center">{{userSetting?.user?.name?.given}} {{userSetting?.user?.name?.family}}</h3>
+<p class="text-center">
+  <label for="passed" class="switch">Passed
+    <input class="tgl tgl-ios"
+           id="{{userSetting?.user?.userName}}"
+           (change)="updateUserSetting()"
+           type="checkbox"
+           [checked]="userSetting?.passed"
+           name="passed">
+    <label class="tgl-btn" for="{{userSetting?.user?.userName}}"></label>
+  </label>
+  <button *ngIf="userSetting?.passed" class="btn btn-primary editUserSettings" data-toggle="modal" [attr.data-target]="'#modal-' + userSetting?.user?.userName + '-settings'"><i class="fa fa-ellipsis-v" aria-hidden="true"></i></button>
+</p>
+
+<div [attr.id]="'modal-' + userSetting?.user?.userName + '-settings'" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+         <h3 class="modal-title">{{userSetting?.user.name?.given}}'s Settings</h3>
+     </div>
+     <div class="modal-body">
+
+        <div class="row">
+          <div class="col-xs-12 col-sm-6">
+            <h4>Terms&nbsp;<span class="" (click)="refreshTerms()">&nbsp;<i class="fa fa-refresh" aria-hidden="true"></i></span></h4>
+
+            <div class="row" *ngFor="let term of terms; let i = index">
+              <div class="col-xs-12">
+                <div class="col-xs-8">
+                  {{term.description}}
+                </div>
+
+                <div class="col-xs-4">
+                  <label for="term-{{userSetting?.user?.userName}}-{{term.id}}" class="switch">
+                    <input class="tgl tgl-ios"
+                           [attr.id]="'term-'+ userSetting?.user?.userName  + '-' + term.id"
+                           (change)="updateUserTerm(term)"
+                           type="checkbox"
+                           [checked]="containsTerm(term)"
+                           name="{{term.id}}">
+                    <label class="tgl-btn" for="term-{{userSetting?.user?.userName}}-{{term.id}}"></label>
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-6">
+            <h4>Courses&nbsp;<span class="" (click)="refreshCourses()">&nbsp;<i class="fa fa-refresh" aria-hidden="true"></i></span></h4>
+
+            <form role="form">
+              <div class="form-group">
+                <div class="input-group">
+                  <input [(ngModel)]="courseId"
+                         id="addCourse"
+                         name="courseId"
+                         type="text"
+                         (keyup.enter)="addCourseId()"
+                         class="form-control"
+                         autocomplete="off"
+                         placeholder="Add Course Id. i.e. ENC1101">
+                  <span class="input-group-btn">
+                    <a (click)="addCourseId()" class="btn btn-success" type="submit"><i class="fa fa-plus" aria-hidden="true"></i></a>
+                  </span>
+                </div>
+              </div>
+            </form>
+
+            <div class="row" *ngFor="let courseId of userSetting?.courseFilters; let i = index">
+              <div class="col-xs-12">
+                <div class="col-xs-8">
+                  {{courseId}}
+                </div>
+
+                <div class="col-xs-4">
+                    <a (click)="removeCourseId(i, courseId)"
+                       class="btn btn-danger" type="submit">
+                      <i class="fa fa-minus" aria-hidden="true"></i>
+                    </a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

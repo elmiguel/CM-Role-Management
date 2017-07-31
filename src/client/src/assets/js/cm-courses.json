@@ -1,0 +1,80 @@
+{
+  "skenanya": {
+    "ENC1101": {
+       "234523": {
+        "editMode": false
+        },
+      "553548": {
+        "editMode": false
+      },
+      "234234": {
+        "editMode": false
+      }
+    }
+  },
+  "bkalev": {
+    "ENC1101": {
+       "234523": {
+        "editMode": false
+        },
+      "553548": {
+        "editMode": false
+      },
+      "234234": {
+        "editMode": false
+      }
+    }
+  },
+  "kchip": {
+    "ENC1101": {
+       "234523": {
+        "editMode": true
+        },
+      "553548": {
+        "editMode": true
+      },
+      "234234": {
+        "editMode": true
+      }
+    }
+  },
+  "gmilán": {
+    "ENC1101": {
+       "234523": {
+        "editMode": false
+        },
+      "553548": {
+        "editMode": false
+      },
+      "234234": {
+        "editMode": false
+      }
+    }
+  },
+  "iÞórketi": {
+    "ENC1101": {
+       "234523": {
+        "editMode": false
+        },
+      "553548": {
+        "editMode": true
+      },
+      "234234": {
+        "editMode": true
+      }
+    }
+  },
+  "jprabhu": {
+    "ENC1101": {
+       "234523": {
+        "editMode": false
+        },
+        "553548": {
+          "editMode": true
+        },
+        "234234": {
+          "editMode": false
+        }
+    }
+  }
+}

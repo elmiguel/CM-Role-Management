@@ -1,0 +1,24 @@
+app.ts starts
+  loads dependencies
+  loads config
+
+  create app
+  config app
+  setup and use middleware
+    active-directory: Company AD (LDAP)
+    authentication: helps setup token interactions
+    authorization: to determine if a user is authorized
+    bbrest-api: Bb API interactions
+    local: local login strategy
+    sendJson: helper function to deliver json results to the end user
+    windowsauth: Company LDAP (AD)
+
+    * Determine which module to use: active-directory or windowsauth
+
+  setup routes
+    api: local api for app calls
+    auth: login, logout
+    bbapi: api to communicate with Bb
+
+  setup error handling
+  start server

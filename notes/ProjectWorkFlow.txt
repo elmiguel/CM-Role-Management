@@ -1,0 +1,88 @@
+Done 1. Lookup the training shell and store it if does not already in Mongo
+2. Lookup the course/users to return the current state of the enrollments, store
+  a. Go through each user and see if they have settings, if not create.
+  b. each user will have courses and terms in which they will opting out.
+  c. See if there is a way to return all memberships for the user and filter by term
+    * If so, then store only the courses in which have IN|VC and store in courses
+    * When ever a user is loaded, check the those courses and return any changes.
+    * If there is an instructor change, load that new user and apply changes
+    * see if that user has passed.
+
+3. Lookup the grading assessment and return the grades.
+4. If the max score is greater or equal to 86%, then mark as passed
+
+
+
+Routes with sub models:
+
+  Memberships:
+    courses/:courseId/users/:userId?
+
+    actual relationship: course_users
+      userId, courseId
+
+    1. get the list of memberships for the course (auto sync, or manual update)
+    2. check to see if the course exists in the courses collection: findOrCreateOrUpdate
+    3. loop through memberships, if user does not exists, fetch and save
+      a. while looping insert or update membership in memberships with:
+        * {
+          course: ObjectId(reference),
+          user: ObjectId(reference),
+          ..membership data..
+        }
+
+
+app.locals:
+  bb = {
+    models,
+    payload,
+    apiUrl,
+  }
+
+
+
+Collections of importance:
+  courses, users, memberships, user_settings
+
+Collections:
+  Courses:
+    Main Fields:
+      ...fields from course api
+      memberships: Array[ObjectId(reference)] <- populated/virtual
+
+  Users:
+    Main Fields:
+      ...fields from user api
+      settings: ObjectId(reference) <- populated/virtual
+      memberships: ObjectId(reference) <- populated/virtual
+
+  Memberships:
+    Main Fields:
+      course: ObjectId(reference)
+      user: ObjectId(reference)
+      availability: Object
+      courseRole: String
+
+    Methods:
+      updateAvailability()
+      updateCourseRole()
+
+
+  UserSettings:
+    Main Fields:
+      user: ObjectId(reference)
+      passed: Boolean
+      terms: Array[String]
+      courses: Array[String]
+      optSections: Array[Object{
+        membership: ObjectId(reference),
+        editMode: Boolean
+      }]
+
+    Methods:
+      removeTerm()
+      addTerm()
+      togglePassed()
+      addCourse()
+      removeCourse()
+      toggleEditMode()

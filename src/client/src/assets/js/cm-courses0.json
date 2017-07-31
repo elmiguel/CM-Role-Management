@@ -1,0 +1,37 @@
+{
+  "skenanya": [{
+      "course_id": "ENC1101",
+      "sections": [234523, 234234, 553548],
+      "editMode": false
+  }],
+
+  "bkalev": [{
+      "course_id": "ENC1101",
+      "sections": [234523, 234234, 553548],
+      "editMode": false
+  }],
+
+  "kchip": [{
+      "course_id": "ENC1101",
+      "sections": [234523, 234234, 553548],
+      "editMode": false
+  }],
+
+  "gmilán": [{
+      "course_id": "ENC1101",
+      "sections": [234523, 234234, 553548],
+      "editMode": false
+  }],
+
+  "iÞórketi": [{
+      "course_id": "ENC1101",
+      "sections": [234523, 234234, 553548],
+      "editMode": false
+  }],
+
+  "jprabhu": [{
+      "course_id": "ENC1101",
+      "sections": [234523, 234234, 553548],
+      "editMode": false
+  }]
+}
